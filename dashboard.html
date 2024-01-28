@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard | Litra</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <div class=" d-flex" id="wrapper">
+        <!-- Sidebar -->
+        <div class="bg-blue" id="sidebar-wrapper" style="background-color: #41644A; margin-bottom: -60px">
+            <div class="sidebar-heading py-4  border-bottom">
+                <div class="coba"
+                    style="width: 100px; height: 90px;  border-radius: 5px; margin-bottom:50px; margin-left:-10px; margin-top:20px; ">
+                    <img src="gambar/logo_web.png" alt=""
+                        style="width: 60px; height: 60px; box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);border-radius: 145px;">
+                </div>
+                <div class="bisa">
+                    <p
+                        style="font-family: poppins; font-weight:700; color:white; margin-top:-130px; margin-right:-60px; margin-left:60px; font-size:medium ">
+                        Land Suitability <br>
+                        Predicted</p>
+                </div>
+
+            </div>
+            <div class="list-group list-group-flush my-3">
+                <div class="item"><a href="dashboard.html"
+                        class="list-group-item list-group-item-action bg-transparent second-text active"
+                        style="font-weight: 300;"><i class="fas fa-tachometer-alt me-2"></i>Dashboard</a></div>
+                <div class="item">
+                    <div class="dropdown-btn" onclick="toggleDropdown('dropdown-1')"
+                        style="font-weight: 300; margin-left:15px; color:#FFF">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                            class="bi bi-layers" viewBox="0 0 16 16">
+                            <path
+                                d="M8.235 1.559a.5.5 0 0 0-.47 0l-7.5 4a.5.5 0 0 0 0 .882L3.188 8 .264 9.559a.5.5 0 0 0 0 .882l7.5 4a.5.5 0 0 0 .47 0l7.5-4a.5.5 0 0 0 0-.882L12.813 8l2.922-1.559a.5.5 0 0 0 0-.882l-7.5-4zm3.515 7.008L14.438 10 8 13.433 1.562 10 4.25 8.567l3.515 1.874a.5.5 0 0 0 .47 0l3.515-1.874zM8 9.433 1.562 6 8 2.567 14.438 6z" />
+                        </svg> Prediction
+                        <i class="fas fa-angle-right dropdown"></i>
+                    </div>
+                    <div id="dropdown-1" class="dropdown-container">
+                        <a href="#">Data Real Time</a>
+                        <a href="datamanual.html">Add Manual Data</a>
+                        <a href="uploaddata.html">Upload Data</a>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <nav class="navbar navbar-expand-lg navbar-light bg-transparent py-3 px-3">
+                <div class="d-flex align-items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                        class="bi bi-justify" id="menu-toggle" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M2 12.5a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5m0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5m0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5m0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5" />
+                    </svg>
+                </div>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle black-text fw-bold" href="#" id="navbarDropdown"
+                                role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: #000;">
+                                <i class="fas fa-user me-2" style="color: #000;"></i>Admin 1
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="#">Settings</a></li>
+                                <li><a class="dropdown-item" href="Home.html">Logout</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <div class="container-fluid px-4" style="margin-top: -30px;">
+                <div class="row g-3 my-2">
+                    <div class="col-md-3">
+                        <div class="p-3 shadow-sm d-flex justify-content-around align-items-center rounded"
+                            style="background-color: #D9D9D9;">
+                            <div>
+                                <h3 class="fs-2"
+                                    style="color: #FFF; font-family: Poppins; font-size: 30px;font-style: normal;font-weight: 700;line-height: normal;">
+                                    24 &#8451;</h3>
+                                <p class="fs-5"
+                                    style="color: #FFF; font-family: Poppins; font-size: 30px;font-style: normal;font-weight: 700;line-height: normal;">
+                                    Temperture</p>
+                            </div>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 80 80"
+                                fill="none">
+                                <path
+                                    d="M70 29.9997H67.3333C66.9887 28.504 66.4033 27.0742 65.6 25.7663L67.4667 23.8997C68.0128 23.262 68.2981 22.4417 68.2657 21.6028C68.2333 20.7639 67.8855 19.9681 67.2919 19.3745C66.6982 18.7808 65.9024 18.433 65.0635 18.4006C64.2246 18.3682 63.4043 18.6536 62.7667 19.1997L60.9 21.0663C59.5921 20.263 58.1624 19.6776 56.6667 19.333V16.6663C56.6667 15.7823 56.3155 14.9344 55.6904 14.3093C55.0652 13.6842 54.2174 13.333 53.3333 13.333C52.4493 13.333 51.6014 13.6842 50.9763 14.3093C50.3512 14.9344 50 15.7823 50 16.6663V19.333C48.5131 19.6724 47.0935 20.2583 45.8 21.0663L43.9 19.1997C43.2623 18.6536 42.4421 18.3682 41.6032 18.4006C40.7642 18.433 39.9684 18.7808 39.3748 19.3745C38.7811 19.9681 38.4334 20.7639 38.401 21.6028C38.3686 22.4417 38.6539 23.262 39.2 23.8997L41.0667 25.7997C40.7667 26.2997 40.5333 26.8663 40.2667 27.3997C38.5528 26.9159 36.7808 26.6692 35 26.6663C30.1962 26.6636 25.5519 28.39 21.9162 31.5299C18.2806 34.6697 15.8966 39.0133 15.2 43.7663C12.4873 44.527 10.1415 46.2437 8.59588 48.5992C7.05025 50.9547 6.40919 53.7899 6.79112 56.5813C7.17305 59.3726 8.55216 61.9314 10.6737 63.7852C12.7953 65.6389 15.516 66.6623 18.3333 66.6663H48.9C52.728 66.6663 56.3991 65.1457 59.1059 62.4389C61.8127 59.7321 63.3333 56.061 63.3333 52.233C63.3304 50.463 62.9911 48.7096 62.3333 47.0663L62.7667 47.4663C63.3875 48.0822 64.2255 48.4293 65.1 48.433C65.5387 48.4355 65.9736 48.3515 66.3797 48.1856C66.7858 48.0197 67.1552 47.7753 67.4667 47.4663C68.0875 46.8418 68.436 45.997 68.436 45.1163C68.436 44.2357 68.0875 43.3909 67.4667 42.7663L65.6 40.8997C66.4033 39.5918 66.9887 38.162 67.3333 36.6663H70C70.8841 36.6663 71.7319 36.3152 72.357 35.69C72.9821 35.0649 73.3333 34.2171 73.3333 33.333C73.3333 32.449 72.9821 31.6011 72.357 30.976C71.7319 30.3509 70.8841 29.9997 70 29.9997ZM48.9 59.9997H18.3333C17.0073 59.9997 15.7355 59.4729 14.7978 58.5352C13.8601 57.5975 13.3333 56.3258 13.3333 54.9997C13.3333 53.6736 13.8601 52.4018 14.7978 51.4641C15.7355 50.5265 17.0073 49.9997 18.3333 49.9997C19.2174 49.9997 20.0652 49.6485 20.6904 49.0234C21.3155 48.3982 21.6667 47.5504 21.6667 46.6663C21.681 43.5187 22.8084 40.4775 24.8495 38.0812C26.8905 35.6849 29.7135 34.088 32.8188 33.5731C35.9242 33.0582 39.1115 33.6586 41.8167 35.2679C44.5219 36.8772 46.5706 39.3917 47.6 42.3663C47.7905 42.9391 48.133 43.4494 48.591 43.8428C49.0489 44.2361 49.605 44.4977 50.2 44.5997C52.092 44.9534 53.7853 45.9971 54.9514 47.5284C56.1176 49.0596 56.6737 50.9694 56.5118 52.8874C56.3499 54.8053 55.4815 56.5948 54.0752 57.9089C52.6688 59.223 50.8245 59.9681 48.9 59.9997ZM58.9 38.833C58.3124 39.3859 57.6364 39.8366 56.9 40.1663C55.7915 39.4445 54.5921 38.8729 53.3333 38.4663C51.8018 35.1222 49.3947 32.2544 46.3667 30.1663C46.7309 29.3113 47.2508 28.5314 47.9 27.8663C49.3914 26.4841 51.3499 25.7161 53.3833 25.7161C55.4168 25.7161 57.3752 26.4841 58.8667 27.8663C60.2962 29.3403 61.0957 31.313 61.0957 33.3663C61.0957 35.4197 60.2962 37.3924 58.8667 38.8663L58.9 38.833Z"
+                                    fill="white" />
+                            </svg>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <div class="p-3 bg-tertiary shadow-sm d-flex justify-content-around align-items-center rounded"
+                            style="background-color:#D9D9D9">
+                            <div>
+                                <h3 class="fs-2"
+                                    style="color: #FFF; font-family: Poppins; font-size: 30px;font-style: normal;font-weight: 700;line-height: normal;">
+                                    5.6</h3>
+                                <p class="fs-5"
+                                    style="color: #FFF; font-family: Poppins; font-size: 30px;font-style: normal;font-weight: 700;line-height: normal;">
+                                    pH</p>
+                            </div>
+                            <img src="gambar/pH.png" alt="">
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <div class="p-3  shadow-sm d-flex justify-content-around align-items-center rounded"
+                            style="background-color: #D9D9D9;">
+                            <div>
+                                <h3 class="fs-2"
+                                    style="color: #FFF; font-family: Poppins; font-size: 30px;font-style: normal;font-weight: 700;line-height: normal;">
+                                    20.4</h3>
+                                <p class="fs-5"
+                                    style="color: #FFF; font-family: Poppins; font-size: 30px;font-style: normal;font-weight: 700;line-height: normal;">
+                                    Soil Humidity</p>
+                            </div>
+                            <img src="gambar/soil_hum.png" alt="">
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <div class="p-3 bg-tertiary-color shadow-sm d-flex justify-content-around align-items-center rounded"
+                            style="background-color: #D9D9D9;">
+                            <div>
+                                <h3 class="fs-2"
+                                    style="color: #FFF; font-family: Poppins; font-size: 30px;font-style: normal;font-weight: 700;line-height: normal;">
+                                    31</h3>
+                                <p class="fs-5"
+                                    style="color: #FFF; font-family: Poppins; font-size: 30px;font-style: normal;font-weight: 700;line-height: normal;">
+                                    Nitro</p>
+                            </div>
+                            <img src="gambar/nitro.png" alt="">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row my-5">
+                    <div class="fs-4 mb-3" style="color: #000; font-family: Poppins;font-size: 30px;font-style: normal;font-weight: 700;line-height: normal; border-radius: 10px;
+                    background: rgba(65, 100, 74, 0.70); height:60px; padding-top:10px;">About The Dataset</div>
+
+                    <div class="aboutdataset"
+                        style="width: 100%; height: 100%; background: #f5F5F5; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); margin-bottom:30px;">
+                        <div class="text"
+                            style="width: 50%; color: black; font-size: 19px; font-family: Poppins; font-weight: 300; word-wrap: break-word; margin-left: 30px; margin-top: 30px;">
+                            The dataset used consists of <b> 7984 rows of data</b>. The processed data is numeric and
+                            includes <b>7
+                                features and 1 label </b>. The dataset consists of 2 classes, namely "Cocok" and
+                            "Tidak".
+                            The data
+                            source comes from a sensor <b>placed in Selaawi, Garut Regency</b>, right in front of the
+                            BPP
+                            Selaawi
+                            office. The focus of this research is on shallot plants. The time span of data collection
+                            involves <b>August, September, October, and November 2023</b>, starting from the planting
+                            phase,
+                            generative phase, vegetative phase, to harvest phase.
+                        </div>
+                        <div class="gambar">
+                            <img src="gambar/Statistics-pana.png" alt=""
+                                style="width: 40%; height: 30%;  border-radius: 10px; margin-left: 650px; margin-top: -380px; margin-bottom:20px;">
+                        </div>
+                    </div>
+
+                    <div
+                        style="width: 100%; height: 100%; color: black; font-size: 24px; font-family: Poppins; font-weight: 400; word-wrap: break-word">
+                        Features</div>
+
+                    <div class="col ">
+                        <table class="table table-hover text-center"
+                            style=" font:poppins;  box-shadow: 0px 0px 10px rgba(114, 114, 113, 0.5); ">
+                            <thead class="thead-dark">
+                                <tr>
+
+                                    <th scope="col">Hum</th>
+                                    <th scope="col">Soil_nitro1</th>
+                                    <th scope="col">Soil_phos1</th>
+                                    <th scope="col">Soil_pot1</th>
+                                    <th scope="col">Soil_temp1</th>
+                                    <th scope="col">Soil_ph1</th>
+                                    <th scope="col">temp</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+
+                                    <td>96</td>
+                                    <td>86.9</td>
+                                    <td>76.8</td>
+                                    <td>72.6</td>
+                                    <td>72.7</td>
+                                    <td>64.9</td>
+                                    <td>64.7</td>
+                                </tr>
+                                <tr>
+
+                                    <td>72.6</td>
+                                    <td>72.7</td>
+                                    <td>64.9</td>
+                                    <td>96</td>
+                                    <td>86.9</td>
+                                    <td>76.8</td>
+                                    <td>72.6</td>
+
+                                </tr>
+                                <tr>
+
+                                    <td>72.7</td>
+                                    <td>64.9</td>
+                                    <td>96</td>
+                                    <td>72.7</td>
+                                    <td>64.9</td>
+                                    <td>96</td>
+                                    <td>86.9</td>
+                                </tr>
+                                <tr>
+
+                                    <td>72.7</td>
+                                    <td>64.9</td>
+                                    <td>96</td>
+                                    <td>86.9</td>
+                                    <td>64.9</td>
+                                    <td>96</td>
+                                    <td>64.9</td>
+                                </tr>
+                                <tr>
+
+                                    <td>72.7</td>
+                                    <td>64.9</td>
+                                    <td>96</td>
+                                    <td>86.9</td>
+                                    <td>64.9</td>
+                                    <td>96</td>
+                                    <td>86.9</td>
+                                </tr>
+                                <tr>
+
+                                    <td>96</td>
+                                    <td>86.9</td>
+                                    <td>64.9</td>
+                                    <td>96</td>
+                                    <td>86.9</td>
+                                    <td>96</td>
+                                    <td>86.9</td>
+                                </tr>
+                                <tr>
+
+                                    <td>86.9</td>
+                                    <td>64.9</td>
+                                    <td>96</td>
+                                    <td>86.9</td>
+                                    <td>96</td>
+                                    <td>86.9</td>
+                                    <td>96</td>
+                                </tr>
+                                <tr>
+
+                                    <td>62</td>
+                                    <td>78</td>
+                                    <td>96</td>
+                                    <td>86.9</td>
+                                    <td>96</td>
+                                    <td>86.9</td>
+                                    <td>96</td>
+                                </tr>
+                                <tr>
+
+                                    <td>86.9</td>
+                                    <td>96</td>
+                                    <td>86.9</td>
+                                    <td>96</td>
+                                    <td>78</td>
+                                    <td>96</td>
+                                    <td>86.9</td>
+                                </tr>
+                                <tr>
+
+                                    <td>96</td>
+                                    <td>86.9</td>
+                                    <td>96</td>
+                                    <td>78</td>
+                                    <td>96</td>
+                                    <td>86.9</td>
+                                    <td>86.9</td>
+                                </tr>
+                                <tr>
+
+                                    <td>96</td>
+                                    <td>78</td>
+                                    <td>96</td>
+                                    <td>86.3</td>
+                                    <td>86.9</td>
+                                    <td>86.9</td>
+                                    <td>86.9</td>
+                                </tr>
+                                <tr>
+
+                                    <td>96</td>
+                                    <td>86.2</td>
+                                    <td>86.3</td>
+                                    <td>86.4</td>
+                                    <td>96</td>
+                                    <td>78</td>
+                                    <td>96</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div
+                        style="width: 100%; height: 100%; color: black; font-size: 24px; font-family: Poppins; font-weight: 400; word-wrap: break-word">
+                        Label</div>
+
+
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- /#page-content-wrapper -->
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        var el = document.getElementById("wrapper");
+        var toggleButton = document.getElementById("menu-toggle");
+
+        toggleButton.onclick = function () {
+            el.classList.toggle("toggled");
+        };
+
+    </script>
+    <script>
+        function toggleDropdown(containerId) {
+            var dropdownContainer = document.getElementById(containerId);
+            dropdownContainer.style.display = (dropdownContainer.style.display === "block") ? "none" : "block";
+        }
+    </script>
+</body>
+
+</html>
